@@ -41,23 +41,23 @@ public class CalculatorTest {
     }
 
     @Test
-    //@DisplayName("Power of zero and one")
-    public void testPowerEdgeCases() {
+    @DisplayName("Power of zero and one")
+    void testPowerEdgeCases() {
         Calculator calc = new Calculator();
         assertEquals(1.0, calc.power(5, 0), 0.0001, "Any number^0 should be 1");
         assertEquals(5.0, calc.power(5, 1), 0.0001, "Any number^1 should be itself");
     }
     
     @Test
-    //@DisplayName("Power of negative exponent")
-    public void testPowerNegativeExponent() {
+    @DisplayName("Power of negative exponent")
+    void testPowerNegativeExponent() {
         Calculator calc = new Calculator();
         assertEquals(0.25, calc.power(2, -2), 0.0001, "2^-2 should be 0.25");
     }
     
     @Test
-    //@DisplayName("Power of large exponents")
-    public void testPowerLargeExponent() {
+    @DisplayName("Power of large exponents")
+    void testPowerLargeExponent() {
         Calculator calc = new Calculator();
         assertEquals(1024.0, calc.power(2, 10), 0.0001, "2^10 should be 1024");
     }
