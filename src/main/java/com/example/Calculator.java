@@ -1,16 +1,18 @@
 package com.example;
 
+import java.math.BigDecimal;
+
 public class Calculator {
     public double add(double a, double b) { return a + b; }
     public double subtract(double a, double b) { return a - b; }
 
-    public double multiply(double a, double b) {
-        // double result = a * b;
-        // if (Double.class.isInstance(result)) {
-        //     return Math.round(result * 100.0) / 100.0;
-        // }
-        return (a * b);
-    }
+    // public double multiply(double a, double b) {
+    //     // double result = a * b;
+    //     // if (Double.class.isInstance(result)) {
+    //     //     return Math.round(result * 100.0) / 100.0;
+    //     // }
+    //     return (a * b);
+    // }
 
     public double divide(double a, double b) {
         if (b == 0) throw new ArithmeticException("division by zero");
@@ -44,9 +46,9 @@ public class Calculator {
     // }
 
     public double multiply(double a, double b) {
-         BigDecimal x = BigDecimal.valueOf(a); // correct
-         BigDecimal y = BigDecimal.valueOf(b); // correct
-         return x.multiply(y).doubleValue(); 
+        BigDecimal x = BigDecimal.valueOf(a); // correct
+        BigDecimal y = BigDecimal.valueOf(b); // correct
+        return x.multiply(y).doubleValue(); 
     }
 
 }
