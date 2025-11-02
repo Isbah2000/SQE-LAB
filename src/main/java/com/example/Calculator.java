@@ -36,4 +36,17 @@ public class Calculator {
         return result;
     }
 
+    // public double multiply(double a, double b) {
+    //      converting double to BigDecimal USING constructor is incorrect
+    //      BigDecimal x = new BigDecimal(a); // BUG
+    //      BigDecimal y = new BigDecimal(b); // BUG
+    //      return x.multiply(y).doubleValue();
+    // }
+
+    public double multiply(double a, double b) {
+         BigDecimal x = BigDecimal.valueOf(a); // correct
+         BigDecimal y = BigDecimal.valueOf(b); // correct
+         return x.multiply(y).doubleValue(); 
+    }
+
 }
