@@ -62,4 +62,18 @@ public class CalculatorTest {
         assertEquals(1024.0, calc.power(2, 10), 0.0001, "2^10 should be 1024");
     }
 
+    @Test
+    void testMultiplyHighPrecision_double() {
+         Calculator calc = new Calculator();
+         // double version isn't exact → will fail
+         assertEquals(0.03, calc.multiply(0.1, 0.3), 0.0000000000000001, "double multiply should be 0.03");
+    }
+    
+    @Test
+    void testMultiplyHighPrecision_BigDecimal() {
+         Calculator calc = new Calculator();
+         // correct result expectation is 0.03 EXACTLY
+         assertEquals(0.03, calc.multiply(0.1, 0.3), 0.0, "BigDecimal multiply should be exact 0.03");
+    }
+
 }
